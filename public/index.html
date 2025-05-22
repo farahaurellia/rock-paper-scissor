@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="start-screen" class="screen active">
+    <div class="title">
+      <h1>Welcome to Rock Paper Scissors</h1>
+    </div>
+    <button id="btn-play">Play</button>
+    <button id="btn-history">History</button>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <h1>Rock Paper Scissors Game</h1>
+    <div class="choices">
+      <button data-choice="rock">Rock</button>
+      <button data-choice="paper">Paper</button>
+      <button data-choice="scissors">Scissors</button>
+    </div>
+      <div class="choices-result">
+        <p>Your choice: <span id="player-choice">-</span></p>
+        <p>Computer's choice: <span id="computer-choice">-</span></p>
+      </div>
+    <div class="result" id="result">Make your move!</div>
+    <div class="scoreboard">
+      <p>You: <span id="player-score">0</span> | Computer: <span id="computer-score">0</span></p>
+    </div>
+    <button id="btn-back-game">Back to Start</button>
+  </div>
+
+  <div id="history-screen" class="screen">
+    <h1>Game History</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player Choice</th>
+          <th>Computer Choice</th>
+          <th>Result</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+      </tbody>
+    </table>
+    <button id="btn-back-history">Back to Start</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

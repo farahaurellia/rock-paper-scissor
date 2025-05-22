@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.screen {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 90vw;
+  max-width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.screen.active {
+  display: flex;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  background: #5a4de9;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  margin: 10px 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(90, 77, 233, 0.6);
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  min-width: 100px;
+}
+
+button:hover {
+  background: #423ab8;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+  background: #342c8a;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button[data-choice="rock"]::before {
+  content: "🪨";
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+button[data-choice="paper"]::before {
+  content: "📄";
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+button[data-choice="scissors"]::before {
+  content: "✂️";
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.result {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  min-height: 30px;
+  color: #ffecb3;
+  text-shadow: 0 0 8px #ffd54f;
+}
+
+.scoreboard {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #d1c4e9;
+}
+
+.choices-result {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b3aedf;
+  user-select: none;
+}
+
+.choices-result p {
+  margin: 6px 0;
+}
+
+
+
+@media (max-width: 400px) {
+  .screen {
+    width: 95%;
+    padding: 20px 25px;
+  }
+
+  button {
+    min-width: 80px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .result {
+    font-size: 20px;
+  }
+
+  .scoreboard, .choices-result {
+    font-size: 16px;
+  }
+}
